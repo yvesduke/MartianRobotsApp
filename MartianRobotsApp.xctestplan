@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "6F3E36D5-D165-4323-AEF3-AC594F0711DE",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MartianRobotsApp.xcodeproj",
+      "identifier" : "8B9066A62AA1FDF800E7ED09",
+      "name" : "MartianRobotsApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:MartianRobotsApp.xcodeproj",
+        "identifier" : "8B9066BC2AA1FDFC00E7ED09",
+        "name" : "MartianRobotsAppTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:MartianRobotsApp.xcodeproj",
+        "identifier" : "8B9066C62AA1FDFC00E7ED09",
+        "name" : "MartianRobotsAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
