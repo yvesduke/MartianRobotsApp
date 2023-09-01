@@ -30,6 +30,8 @@ None
 # Testing
 Units tests viewModel for success and failure situations.
 
+<img width="1210" alt="Screenshot 2023-09-01 at 19 05 03" src="https://github.com/yvesduke/MartianRobotsApp/assets/8191486/25aef084-6c65-4f42-940f-d0df3f80434b">
+
 # Screens Recording
 
 https://github.com/yvesduke/MartianRobotsApp/assets/8191486/0ceb2fe0-e4df-475a-af3a-3b95c6063581
