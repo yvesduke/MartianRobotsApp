@@ -29,39 +29,37 @@ class ViewController: UIViewController {
 //        1 1 E
 //        FFFFFFFF
 //        """
-    
-    @IBOutlet weak var outputLabel: UILabel!
     let robotViewModel = RobotViewModel()
     
+    @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var inputSampleLabel3: UILabel!
     @IBOutlet weak var inputSampleLabel2: UILabel!
     @IBOutlet weak var inputSampleLabel1: UILabel!
-    
     @IBOutlet weak var invalidInputLabel: UILabel!
     
-    
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        title = "MartianRobots"
+
+        title = "Martian Robots"
         inputSampleLabel1.text = input1
         inputSampleLabel2.text = input2
         inputSampleLabel3.text = input3
         invalidInputLabel.text = "Invalid Input"
     }
     
-    
     @IBAction func performRobotAction(_ sender: Any) {
+
         let testInput = input1
+
         do {
             let output = try robotViewModel.processRobots(input: testInput)
             self.outputLabel.text = output.last
         } catch {
             showErrorMessage(errorString: error.localizedDescription)
         }
-        
     }
-    
+
     @IBAction func PerformRobotAction2(_ sender: UIButton) {
         let testInput = input2
        
@@ -72,8 +70,9 @@ class ViewController: UIViewController {
             showErrorMessage(errorString: error.localizedDescription)
         }
     }
-    
+
     @IBAction func PerformRobotAction3(_ sender: UIButton) {
+
         let testInput = input3
         do {
             let output = try robotViewModel.processRobots(input: testInput)
@@ -81,12 +80,12 @@ class ViewController: UIViewController {
         } catch {
             showErrorMessage(errorString: error.localizedDescription)
         }
-        
     }
     
     @IBAction func invalidInputButton(_ sender: UIButton) {
-        
-        let testInput = ""
+
+        guard let testInput = invalidInputLabel.text else { return  }
+
         do {
             let output = try robotViewModel.processRobots(input: testInput)
             self.outputLabel.text = output.last
@@ -94,16 +93,12 @@ class ViewController: UIViewController {
             showErrorMessage(errorString: error.localizedDescription)
         }
     }
-    
+
     func showErrorMessage(errorString: String){
-        print("Try Again")
+
         let alertController = UIAlertController(title: "Error", message: errorString, preferredStyle: .alert)
-        
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
         alertController.addAction(cancelAction)
-        
         present(alertController, animated: true, completion: nil)
     }
 }
