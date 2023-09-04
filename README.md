@@ -15,8 +15,10 @@ multiple robots, robots getting lost and robots moving out of the grid's boundar
 
 In the structure files contains: robot struct , View, ViewModel, Network and tests part. 
 
-# Installation
-Can be used with Xcode 14 and above. Compatible with iPhone and iPad with minimum iOS version 15.0.
+# Run Instruction
+Can be used with Xcode 14.3 and above. Compatible with iPhone and iPad with minimum iOS version 15.0. 
+On each button click I am testing a vigen sample data and displaying expected outcomes on the output label. 
+For Invalid Input button, I am testing scenario where invalid input has been entered and displaying error to the user
 
 # Framework
 UIKit, XCTest Framework, 
